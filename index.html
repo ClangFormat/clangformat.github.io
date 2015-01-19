@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>ClangFormat</title>
+        <link rel="stylesheet" href="resources/libraries/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="resources/libraries/bootstrap/css/bootstrap.min.css" />
+        <script src="resources/libraries/bootstrap/javascript/bootstrap.min.js"></script>
+        <script src="resources/libraries/angular/angular.min.js"></script>
+        <script src="resources/libraries/angular/angular-route.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Placing content in the middle -->
+            <div class="col-xs-1"></div>
+            <!-- ***************************** -->
+            
+            <!--    Start of Options List      -->
+            <div class="col-xs-5">
+                <ul class="list-group">
+                    <!--    BasedOnStyle                -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BasedOnStyle</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default">LLVM</button>
+                                    <button type="button" class="btn btn-default">Google</button>
+                                    <button type="button" class="btn btn-default">Chromium</button>
+                                    <button type="button" class="btn btn-default">Mozilla</button>
+                                    <button type="button" class="btn btn-default">WebKit</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AccessModifierOffset        -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AccessModifierOffset</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AlignEscapedNewlinesLeft    -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AlignEscapedNewlinesLeft</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AlignTrailingComments       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AlignTrailingComments</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AllowAllParametersOfDeclarationOnNextLine   -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AllowAllParametersOfDeclarationOnNextLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AllowShortBlocksOnASingleLine       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AllowShortBlocksOnASingleLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AllowShortFunctionsOnASingleLine        -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AllowShortFunctionsOnASingleLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AllowShortIfStatementsOnASingleLine     -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AllowShortIfStatementsOnASingleLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AllowShortLoopsOnASingleLine       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AllowShortLoopsOnASingleLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AlwaysBreakBeforeMultilineStrings       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AlwaysBreakBeforeMultilineStrings</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    AlwaysBreakTemplateDeclarations       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>AlwaysBreakTemplateDeclarations</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    BinPackParameters       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BinPackParameters</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    BreakBeforeBinaryOperators       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BreakBeforeBinaryOperators</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    BreakBeforeBraces       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BreakBeforeBraces</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    BreakBeforeTernaryOperators       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BreakBeforeTernaryOperators</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    BreakConstructorInitializersBeforeComma       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>BreakConstructorInitializersBeforeComma</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ColumnLimit       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ColumnLimit</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    CommentPragmas       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>CommentPragmas</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ConstructorInitializerAllOnOneLineOrOnePerLine       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ConstructorInitializerAllOnOneLineOrOnePerLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ConstructorInitializerIndentWidth       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ConstructorInitializerIndentWidth</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ContinuationIndentWidth       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ContinuationIndentWidth</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    Cpp11BracedListStyle       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>Cpp11BracedListStyle</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    DerivePointerAlignment       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>DerivePointerAlignment</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    DisableFormat       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>DisableFormat</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ExperimentalAutoDetectBinPacking       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ExperimentalAutoDetectBinPacking</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ForEachMacros       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ForEachMacros</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    IndentCaseLabels       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>IndentCaseLabels</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    IndentWidth       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>IndentWidth</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    IndentWrappedFunctionNames       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>IndentWrappedFunctionNames</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    KeepEmptyLinesAtTheStartOfBlocks       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>KeepEmptyLinesAtTheStartOfBlocks</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    Language       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>Language</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    MaxEmptyLinesToKeep       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>MaxEmptyLinesToKeep</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    NamespaceIndentation       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>NamespaceIndentation</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ObjCSpaceAfterProperty       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ObjCSpaceAfterProperty</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    ObjCSpaceBeforeProtocolList       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>ObjCSpaceBeforeProtocolList</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyBreakBeforeFirstCallParameter       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyBreakBeforeFirstCallParameter</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyBreakComment       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyBreakComment</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyBreakFirstLessLess       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyBreakFirstLessLess</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyBreakString       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyBreakString</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyExcessCharacter       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyExcessCharacter</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PenaltyReturnTypeOnItsOwnLine       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PenaltyReturnTypeOnItsOwnLine</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    PointerAlignment       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>PointerAlignment</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpaceBeforeAssignmentOperators       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpaceBeforeAssignmentOperators</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpaceBeforeParens       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpaceBeforeParens</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpaceInEmptyParentheses       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpaceInEmptyParentheses</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpacesBeforeTrailingComments       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpacesBeforeTrailingComments</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpacesInAngles       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpacesInAngles</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpacesInCStyleCastParentheses       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpacesInCStyleCastParentheses</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpacesInContainerLiterals       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpacesInContainerLiterals</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    SpacesInParentheses       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>SpacesInParentheses</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    Standard       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>Standard</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    TabWidth       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>TabWidth</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <!--    UseTab       -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            
+                            <div class="col-xs-6">
+                                <p>UseTab</p>
+                            </div>
+                            
+                            <div class="col-xs-6">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default"></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--    End of Options List        -->
+            
+            
+            <!--    Start of code area         -->
+            <div class="col-xs-5">
+                <p> Code here </p>
+            </div>
+            <!--    End of code area           -->
+            
+            <!-- ***************************** -->
+            <div class="col-xs-1"></div>
+            <!-- Placing content in the middle -->
+        </div>
+    </div>
+</body>
+</html>
